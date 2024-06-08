@@ -1,0 +1,38 @@
+{
+  "name": "director",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A simple URL redirect server",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "wireit",
+    "serve": "wireit"
+  },
+  "wireit": {
+    "build": {
+      "command": "tsc -b --pretty",
+      "files": [
+        "src/**/*.ts"
+      ]
+    },
+    "serve": {
+      "command": "node .",
+      "service": true,
+      "dependencies": [
+        "build"
+      ],
+      "files": [
+        "config.json"
+      ]
+    }
+  },
+  "keywords": [],
+  "author": "Dimitri Glazkov",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "typescript": "^5.4.5",
+    "wireit": "^0.14.4"
+  }
+}
