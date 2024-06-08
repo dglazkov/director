@@ -6,6 +6,7 @@
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
+    "start": "node .",
     "build": "wireit",
     "serve": "wireit"
   },
@@ -17,7 +18,7 @@
       ]
     },
     "serve": {
-      "command": "node .",
+      "command": "npm rum start",
       "service": true,
       "dependencies": [
         "build"
